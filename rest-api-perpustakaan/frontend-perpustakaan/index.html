@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perpustakaan | Sistem Informasi</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body class="bg-[#F5F7FF] min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-[#243B75] text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+            <div>
+                <h1 class="text-2xl font-bold">
+                    Perpustakaan
+                </h1>
+
+                <p class="text-sm text-blue-100">
+                    Sistem Informasi Perpustakaan
+                </p>
+            </div>
+
+            <div class="hidden sm:block text-sm text-pink-200">
+                Digital Library
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+
+        <!-- Navigation -->
+        <nav class="flex flex-wrap gap-3 mb-8">
+
+            <button
+                onclick="showPage('dashboard')"
+                class="nav-button active"
+                id="nav-dashboard">
+                Dashboard
+            </button>
+
+            <button
+                onclick="showPage('books')"
+                class="nav-button"
+                id="nav-books">
+                Buku
+            </button>
+
+            <button
+                onclick="showPage('categories')"
+                class="nav-button"
+                id="nav-categories">
+                Kategori
+            </button>
+
+        </nav>
+
+        <!-- Application Content -->
+        <main id="app">
+
+            <div class="bg-white rounded-2xl shadow-sm p-10 text-center">
+
+                <div class="loader mx-auto mb-4"></div>
+
+                <p class="text-gray-500">
+                    Memuat aplikasi...
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-500 py-8">
+        © 2026 Perpustakaan. Sistem Informasi.
+    </footer>
+
+    <!-- JavaScript Application -->
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>
