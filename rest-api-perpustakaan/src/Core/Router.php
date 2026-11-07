@@ -46,7 +46,7 @@ class Router
         foreach ($this->routes[$method] as $route => $handler) {
             $pattern = preg_replace('#\{[^}]+\}#', '([^/]+)', $route);
 
-            if (preg_match("#^$pattern$", $uri, $matches)) {
+            if (preg_match("#^{$pattern}$#", $uri, $matches)) {
                 array_shift($matches);
 
                 call_user_func_array(

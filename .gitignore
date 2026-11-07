@@ -1,0 +1,14 @@
+# Environment
+.env
+**/.env
+
+# Dependencies
+vendor/
+node_modules/
+
+# Windows
+desktop.ini
+Thumbs.db
+
+# IDE
+.vscode/
